@@ -10,7 +10,7 @@ export class AuthController {
   @Post('login')
   login(@Request() req: any) {
     console.log(req.user);
-
+    return this.authService.login(req.user);
     return req.user;
   }
 }
